@@ -14,7 +14,7 @@ repositories {
 
 dependencies {
     compileOnly 'com.github.Minestom:Minestom:-SNAPSHOT'
-    implementation 'com.github.MinestomPlugins:NextPermissions:v1.1.0'
+    implementation 'com.github.MinestomPlugins:NextPermissions:1.1.0'
     implementation 'com.github.CityWideMC:CityStom:1.0.0'
 }
 
