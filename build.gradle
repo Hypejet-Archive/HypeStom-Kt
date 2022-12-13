@@ -24,6 +24,8 @@ publishing {
             groupId = 'com.github.MinestomPlugins'
             artifactId = 'NextLib'
             version = '1.0.0'
+            
+            from components.java
         }
     }
 }
