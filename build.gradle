@@ -7,7 +7,7 @@ plugins {
 }
 
 group 'com.github.MinestomPlugins'
-version 'v1.0.1'
+version 'v1.0.2'
 
 repositories {
     mavenCentral()
@@ -16,7 +16,7 @@ repositories {
 
 dependencies {
     compileOnly 'com.github.Minestom:Minestom:-SNAPSHOT'
-    implementation 'com.github.MinestomPlugins:NextPermissions:1.1.0'
+    implementation 'com.github.MinestomPlugins:NextPermissions:1.1.1'
     implementation 'com.github.CityWideMC:CityStom:1.0.0'
 }
 
@@ -30,7 +30,7 @@ publishing {
             }
             groupId = 'com.github.MinestomPlugins'
             artifactId = 'NextLib'
-            version = '1.0.1'
+            version = '1.0.2'
         }
     }
 }
