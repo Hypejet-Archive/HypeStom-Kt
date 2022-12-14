@@ -43,16 +43,28 @@ public class Command extends net.minestom.server.command.builder.Command {
         setCondition(this::defaultCondition);
     }
 
+    /**
+     * Sets the subcommand permissions.
+     * @param permissions Array of permissions to be used
+     */
     private void setPermissions(String... permissions) {
         this.permissions.clear();
         this.permissions.addAll(Arrays.asList(permissions));
         updatePermissions();
     }
 
+    /**
+     * Set the required permissions level required for bypassing permissions.
+     * @param level The new op level
+     */
     private void setPermissionLevel(int level) {
         provider.updatePermissions(level, permissions.toArray(new String[0]));
     }
 
+    /**
+     * Add permissions to the subpermission.
+     * @param permissions The permissions to be added.
+     */
     private void addPermissions(String... permissions) {
         this.permissions.addAll(List.of(permissions));
         updatePermissions();
@@ -63,12 +75,15 @@ public class Command extends net.minestom.server.command.builder.Command {
         updatePermissions();
     }
 
+    /**
+     * Updates the subpermission permissions with the new command permissions.
+     */
     private void updatePermissions() {
         provider.updatePermissions(permissions.toArray(new String[0]));
     }
 
     /**
-     * Gives sender access if it is either a console or it has the command permission.
+     * Gives the sender access if it is either a console or if it has the command permission.
      */
     private boolean defaultCondition(CommandSender sender, String command) {
         return sender instanceof ConsoleSender || provider.hasExtensionPermission((Player) sender);
