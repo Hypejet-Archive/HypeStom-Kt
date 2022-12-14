@@ -8,7 +8,7 @@ import me.window.permissions.PermissionProvider;
  */
 public abstract class Extension extends me.heroostech.citystom.Extension {
     
-    public PermissionProvider provider;
+    public static PermissionProvider provider;
     
     @Override
     public void preInitialize() {
