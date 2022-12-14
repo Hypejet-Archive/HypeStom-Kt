@@ -38,7 +38,7 @@ public class Command extends net.minestom.server.command.builder.Command {
      */
     public Command(@NotNull PermissionProvider provider, @NotNull String name, @Nullable String... aliases) {
         super(name, aliases);
-        provider = new SubPermission(provider, name);
+        this.provider = new SubPermission(provider, name);
         setPermissions(name);
         setCondition(this::defaultCondition);
     }
@@ -47,7 +47,7 @@ public class Command extends net.minestom.server.command.builder.Command {
      * Sets the subcommand permissions.
      * @param permissions Array of permissions to be used
      */
-    private void setPermissions(String... permissions) {
+    public void setPermissions(String... permissions) {
         this.permissions.clear();
         this.permissions.addAll(Arrays.asList(permissions));
         updatePermissions();
@@ -57,7 +57,7 @@ public class Command extends net.minestom.server.command.builder.Command {
      * Set the required permissions level required for bypassing permissions.
      * @param level The new op level
      */
-    private void setPermissionLevel(int level) {
+    public void setPermissionLevel(int level) {
         provider.updatePermissions(level, permissions.toArray(new String[0]));
     }
 
@@ -65,12 +65,12 @@ public class Command extends net.minestom.server.command.builder.Command {
      * Add permissions to the subpermission.
      * @param permissions The permissions to be added.
      */
-    private void addPermissions(String... permissions) {
+    public void addPermissions(String... permissions) {
         this.permissions.addAll(List.of(permissions));
         updatePermissions();
     }
 
-    private void removePermissions(String... permissions) {
+    public void removePermissions(String... permissions) {
         this.permissions.removeAll(List.of(permissions));
         updatePermissions();
     }
@@ -78,7 +78,7 @@ public class Command extends net.minestom.server.command.builder.Command {
     /**
      * Updates the subpermission permissions with the new command permissions.
      */
-    private void updatePermissions() {
+    public void updatePermissions() {
         provider.updatePermissions(permissions.toArray(new String[0]));
     }
 

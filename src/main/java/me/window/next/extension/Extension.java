@@ -1,6 +1,9 @@
 package me.window.next.extension;
 
+import me.window.next.command.Command;
 import me.window.permissions.PermissionProvider;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Normal CityStom extension that Automaticlly creates a PermissionProvider.

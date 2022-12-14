@@ -7,7 +7,7 @@ plugins {
 }
 
 group 'com.github.MinestomPlugins'
-version 'v1.0.2'
+version 'v1.0.3'
 
 repositories {
     mavenCentral()
@@ -30,7 +30,7 @@ publishing {
             }
             groupId = 'com.github.MinestomPlugins'
             artifactId = 'NextLib'
-            version = '1.0.2'
+            version = '1.0.3'
         }
     }
 }
