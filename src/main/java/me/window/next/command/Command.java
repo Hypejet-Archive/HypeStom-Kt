@@ -86,6 +86,6 @@ public class Command extends net.minestom.server.command.builder.Command {
      * Gives the sender access if it is either a console or if it has the command permission.
      */
     private boolean defaultCondition(CommandSender sender, String command) {
-        return sender instanceof ConsoleSender || provider.hasExtensionPermission((Player) sender);
+        return sender instanceof ConsoleSender || provider.hasPermission((Player) sender);
     }
 }
