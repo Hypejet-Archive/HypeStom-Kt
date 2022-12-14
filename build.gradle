@@ -1,3 +1,5 @@
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+
 plugins {
     id 'java'
     id "com.github.johnrengelman.shadow" version "7.1.0"
@@ -5,7 +7,7 @@ plugins {
 }
 
 group 'com.github.MinestomPlugins'
-version '1.0.0'
+version 'v1.0.1'
 
 repositories {
     mavenCentral()
@@ -21,13 +23,21 @@ dependencies {
 publishing {
     publications {
         release(MavenPublication) {
+            afterEvaluate {
+                var shadowJar = tasks.findByName("shadowJar")
+                if (shadowJar == null) from(components["java"])
+                else artifact(shadowJar)
+            }
             groupId = 'com.github.MinestomPlugins'
             artifactId = 'NextLib'
-            version = '1.0.0'
-            
-            from components.java
+            version = '1.0.1'
         }
     }
+}
+
+tasks.withType(ShadowJar) {
+    mergeServiceFiles()
+    archiveClassifier.set("")
 }
 
 java {

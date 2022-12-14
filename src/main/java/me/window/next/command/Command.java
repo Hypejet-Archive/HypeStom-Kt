@@ -16,11 +16,26 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * Normal Command witch also uses extra permission features.
+ */
 public class Command extends net.minestom.server.command.builder.Command {
 
     private ArrayList<String> permissions = new ArrayList<>();
     private SubPermission provider;
 
+    /**
+     * Creates a new command.
+     * Default permissions the extension's permissions with the command name as a subpermission.
+     *
+     * @param provider PermissionsProvider, automatically set in the Extension class.
+     * @param name Name of the command SubPermission will be automatically created with this name.
+     * @param aliases Nullable, aliases to the command that the CommandSenders can also run to execute the command.
+     *<br>
+     *                <br>
+     * See also:<br>
+     * {@link Command#setPermissions(String...)}
+     */
     public Command(@NotNull PermissionProvider provider, @NotNull String name, @Nullable String... aliases) {
         super(name, aliases);
         provider = new SubPermission(provider, name);
@@ -52,6 +67,9 @@ public class Command extends net.minestom.server.command.builder.Command {
         provider.updatePermissions(permissions.toArray(new String[0]));
     }
 
+    /**
+     * Gives sender access if it is either a console or it has the command permission.
+     */
     private boolean defaultCondition(CommandSender sender, String command) {
         return sender instanceof ConsoleSender || provider.hasExtensionPermission((Player) sender);
     }
