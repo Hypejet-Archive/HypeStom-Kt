@@ -7,8 +7,11 @@ import me.window.permissions.PermissionProvider;
  * @see me.heroostech.citystom.Extension
  */
 public abstract class Extension extends me.heroostech.citystom.Extension {
+    
+    public PermissionProvider provider;
+    
     @Override
     public void preInitialize() {
-        PermissionProvider provider = new PermissionProvider(getOrigin().getName());
+        provider = new PermissionProvider(getOrigin().getName());
     }
 }
