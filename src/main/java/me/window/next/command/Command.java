@@ -21,8 +21,16 @@ import java.util.Objects;
  */
 public class Command extends net.minestom.server.command.builder.Command {
 
-    private ArrayList<String> permissions = new ArrayList<>();
-    private SubPermission provider;
+    /**
+     * The base permissions of this command
+     */
+    protected ArrayList<String> permissions = new ArrayList<>();
+
+    /**
+     * The permission provider for this command
+     * @see SubPermission
+     */
+    protected SubPermission provider;
 
     /**
      * Creates a new command.
@@ -70,6 +78,10 @@ public class Command extends net.minestom.server.command.builder.Command {
         updatePermissions();
     }
 
+    /**
+     * Remove a list of permissions from the permissions array
+     * @param permissions The permissions to remove
+     */
     public void removePermissions(String... permissions) {
         this.permissions.removeAll(List.of(permissions));
         updatePermissions();
@@ -85,7 +97,7 @@ public class Command extends net.minestom.server.command.builder.Command {
     /**
      * Gives the sender access if it is either a console or if it has the command permission.
      */
-    private boolean defaultCondition(CommandSender sender, String command) {
+    protected boolean defaultCondition(CommandSender sender, String command) {
         return sender instanceof ConsoleSender || provider.hasPermission((Player) sender);
     }
 }

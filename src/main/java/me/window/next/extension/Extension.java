@@ -10,7 +10,12 @@ import org.jetbrains.annotations.Nullable;
  * @see me.heroostech.citystom.Extension
  */
 public abstract class Extension extends me.heroostech.citystom.Extension {
-    
+
+    /**
+     * The extension PermissionProvider.
+     *
+     * @see PermissionProvider
+     */
     public static PermissionProvider provider;
     
     @Override
