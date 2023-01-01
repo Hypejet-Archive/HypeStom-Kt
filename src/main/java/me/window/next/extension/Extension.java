@@ -7,9 +7,9 @@ import org.jetbrains.annotations.Nullable;
 
 /**
  * Normal CityStom extension that Automaticlly creates a PermissionProvider.
- * @see me.heroostech.citystom.Extension
+ * @see xyz.citywide.citystom.Extension
  */
-public abstract class Extension extends me.heroostech.citystom.Extension {
+public abstract class Extension extends xyz.citywide.citystom.Extension {
 
     /**
      * The extension PermissionProvider.

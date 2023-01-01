@@ -24,7 +24,7 @@ public class Command extends net.minestom.server.command.builder.Command {
     /**
      * The base permissions of this command
      */
-    protected ArrayList<String> permissions = new ArrayList<>();
+    protected String permission;
 
     /**
      * The permission provider for this command
@@ -42,22 +42,21 @@ public class Command extends net.minestom.server.command.builder.Command {
      *<br>
      *                <br>
      * See also:<br>
-     * {@link Command#setPermissions(String...)}
+     * {@link Command#setPermission(String)}
      */
     public Command(@NotNull PermissionProvider provider, @NotNull String name, @Nullable String... aliases) {
         super(name, aliases);
         this.provider = new SubPermission(provider, name);
-        setPermissions(name);
+        setPermission(name);
         setCondition(this::defaultCondition);
     }
 
     /**
-     * Sets the subcommand permissions.
-     * @param permissions Array of permissions to be used
+     * Sets the subcommand permission.
+     * @param permission The permission to be used
      */
-    public void setPermissions(String... permissions) {
-        this.permissions.clear();
-        this.permissions.addAll(Arrays.asList(permissions));
+    public void setPermission(String permission) {
+        this.permission = permission;
         updatePermissions();
     }
 
@@ -66,32 +65,14 @@ public class Command extends net.minestom.server.command.builder.Command {
      * @param level The new op level
      */
     public void setPermissionLevel(int level) {
-        provider.updatePermissions(level, permissions.toArray(new String[0]));
-    }
-
-    /**
-     * Add permissions to the subpermission.
-     * @param permissions The permissions to be added.
-     */
-    public void addPermissions(String... permissions) {
-        this.permissions.addAll(List.of(permissions));
-        updatePermissions();
-    }
-
-    /**
-     * Remove a list of permissions from the permissions array
-     * @param permissions The permissions to remove
-     */
-    public void removePermissions(String... permissions) {
-        this.permissions.removeAll(List.of(permissions));
-        updatePermissions();
+        provider.updatePermissions(level, permission);
     }
 
     /**
      * Updates the subpermission permissions with the new command permissions.
      */
     public void updatePermissions() {
-        provider.updatePermissions(permissions.toArray(new String[0]));
+        provider.updatePermissions(permission);
     }
 
     /**
