@@ -4,4 +4,5 @@
 
 # NextLib
 
-Archived use the [new version merged with CityStom and NextPermissions](https://github.com/LabMCGames/NextLib)
+~~Archived use the [new version merged with CityStom and NextPermissions](https://github.com/LabMCGames/NextLib)~~
+This repo has now been unarchived!
