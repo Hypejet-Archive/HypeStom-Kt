@@ -1,7 +1,7 @@
-package me.window.next.command;
+package xyz.citywide.next.command;
 
-import me.window.permissions.PermissionProvider;
-import me.window.permissions.SubPermission;
+import xyz.citywide.next.permission.PermissionProvider;
+import xyz.citywide.next.permission.SubPermission;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import net.minestom.server.adventure.audience.Audiences;
@@ -20,11 +20,6 @@ import java.util.Objects;
  * Normal Command witch also uses extra permission features.
  */
 public class Command extends net.minestom.server.command.builder.Command {
-
-    /**
-     * The base permissions of this command
-     */
-    protected String permission;
 
     /**
      * The permission provider for this command
@@ -56,8 +51,7 @@ public class Command extends net.minestom.server.command.builder.Command {
      * @param permission The permission to be used
      */
     public void setPermission(String permission) {
-        this.permission = permission;
-        updatePermissions();
+        provider.updatePermissions(permission);
     }
 
     /**
@@ -65,14 +59,7 @@ public class Command extends net.minestom.server.command.builder.Command {
      * @param level The new op level
      */
     public void setPermissionLevel(int level) {
-        provider.updatePermissions(level, permission);
-    }
-
-    /**
-     * Updates the subpermission permissions with the new command permissions.
-     */
-    public void updatePermissions() {
-        provider.updatePermissions(permission);
+        provider.setOpLevel(level);
     }
 
     /**

@@ -4,6 +4,7 @@ plugins {
     id 'java'
     id "com.github.johnrengelman.shadow" version "7.1.2"
     id 'maven-publish'
+    id "io.freefair.lombok" version "6.6.1"
 }
 
 group 'com.github.MinestomPlugins'
@@ -16,7 +17,6 @@ repositories {
 
 dependencies {
     compileOnly 'com.github.Minestom:Minestom:-SNAPSHOT'
-    implementation 'com.github.MinestomPlugins:NextPermissions:v1.1.3'
     implementation 'com.github.CityWideMC:CityStom:1.4.0'
 }
 

@@ -4,6 +4,4 @@
 
 # NextLib
 
-
-
-This branch contains code that is unstable, has not been tested and is not ready for production.
+Basic but useful utilities for creating Minestom extension (and other Minestom related stuff).
