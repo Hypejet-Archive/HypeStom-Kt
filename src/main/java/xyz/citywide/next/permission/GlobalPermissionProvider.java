@@ -1,4 +1,4 @@
-package xyz.citywide.next.permissions;
+package xyz.citywide.next.permission;
 
 import net.minestom.server.entity.Player;
 

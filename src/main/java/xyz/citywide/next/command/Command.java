@@ -59,7 +59,7 @@ public class Command extends net.minestom.server.command.builder.Command {
      * @param level The new op level
      */
     public void setPermissionLevel(int level) {
-        provider.opLevel = level;
+        provider.setOpLevel(level);
     }
 
     /**

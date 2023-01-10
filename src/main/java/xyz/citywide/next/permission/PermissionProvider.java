@@ -1,5 +1,7 @@
-package xyz.citywide.next.permissions;
+package xyz.citywide.next.permission;
 
+import lombok.Getter;
+import lombok.Setter;
 import net.minestom.server.entity.Player;
 
 /**
@@ -14,14 +16,14 @@ public class PermissionProvider {
     /**
      * Permission
      */
-    public String extensionPermission;
+    @Getter protected String extensionPermission;
     /**
      *<pre>
      *The minimum permission level where the player bypasses permission check.
      *1-4, 5 to disable.
      *</pre> 
      */
-    public int opLevel;
+    @Getter @Setter public int opLevel;
 
     /**
      * Creates a new PermissionProvider
