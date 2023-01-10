@@ -1,7 +1,7 @@
-package me.window.next.command;
+package xyz.citywide.next.command;
 
-import me.window.permissions.PermissionProvider;
-import me.window.permissions.SubPermission;
+import xyz.citywide.permissions.PermissionProvider;
+import xyz.citywide.permissions.SubPermission;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import net.minestom.server.adventure.audience.Audiences;

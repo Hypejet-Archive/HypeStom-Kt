@@ -1,7 +1,7 @@
-package me.window.next.extension;
+package xyz.citywide.next.extension;
 
-import me.window.next.command.Command;
-import me.window.permissions.PermissionProvider;
+import xyz.citywide.next.command.Command;
+import xyz.citywide.permissions.PermissionProvider;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -17,9 +17,16 @@ public abstract class Extension extends xyz.citywide.citystom.Extension {
      * @see PermissionProvider
      */
     public static PermissionProvider provider;
-    
-    @Override
-    public void preInitialize() {
+
+    public Extension(String permission, int oplevel) {
+        provider = new PermissionProvider(oplevel, permission);
+    }
+
+    public Extension(String permission) {
+        provider = new PermissionProvider(permission);
+    }
+
+    public Extension() {
         provider = new PermissionProvider(getOrigin().getName());
     }
 }
