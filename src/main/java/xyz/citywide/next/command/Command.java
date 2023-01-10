@@ -22,11 +22,6 @@ import java.util.Objects;
 public class Command extends net.minestom.server.command.builder.Command {
 
     /**
-     * The base permissions of this command
-     */
-    protected String permission;
-
-    /**
      * The permission provider for this command
      * @see SubPermission
      */
@@ -56,8 +51,7 @@ public class Command extends net.minestom.server.command.builder.Command {
      * @param permission The permission to be used
      */
     public void setPermission(String permission) {
-        this.permission = permission;
-        updatePermissions();
+        provider.updatePermissions(permission);
     }
 
     /**
@@ -65,14 +59,7 @@ public class Command extends net.minestom.server.command.builder.Command {
      * @param level The new op level
      */
     public void setPermissionLevel(int level) {
-        provider.updatePermissions(level, permission);
-    }
-
-    /**
-     * Updates the subpermission permissions with the new command permissions.
-     */
-    public void updatePermissions() {
-        provider.updatePermissions(permission);
+        provider.opLevel = level;
     }
 
     /**
