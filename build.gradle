@@ -4,6 +4,7 @@ plugins {
     id 'java'
     id "com.github.johnrengelman.shadow" version "7.1.2"
     id 'maven-publish'
+    id "io.freefair.lombok" version "6.6.1"
 }
 
 group 'com.github.MinestomPlugins'
