@@ -7,17 +7,20 @@ plugins {
     id "io.freefair.lombok" version "6.6.1"
 }
 
-group 'com.github.MinestomPlugins'
-version 'v1.0.6'
+group 'com.github.CityWideMC'
+version 'v2.0.0'
 
 repositories {
     mavenCentral()
     maven { url 'https://jitpack.io' }
+    maven { url "https://s01.oss.sonatype.org/content/repositories/snapshots/" }
 }
 
 dependencies {
     compileOnly 'com.github.Minestom:Minestom:-SNAPSHOT'
-    implementation 'com.github.CityWideMC:CityStom:1.4.0'
+    implementation('net.kyori:adventure-text-minimessage:4.12.0')
+    implementation( "com.moandjiezana.toml:toml4j:0.7.2")
+    compileOnly("org.mongodb:mongo-java-driver:3.12.11")
 }
 
 publishing {
@@ -28,9 +31,9 @@ publishing {
                 if (shadowJar == null) from(components["java"])
                 else artifact(shadowJar)
             }
-            groupId = 'com.github.MinestomPlugins'
+            groupId = 'com.github.CityWideMC'
             artifactId = 'NextLib'
-            version = '1.0.6'
+            version = 'v2.0.0'
         }
     }
 }
@@ -43,6 +46,9 @@ tasks.withType(ShadowJar) {
 java {
     withSourcesJar()
     withJavadocJar()
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
 }
 
 wrapper {
