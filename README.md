@@ -2,6 +2,6 @@
 
 
 
-# NextLib
+# HypeStom
 
 Basic but useful utilities for creating Minestom extension (and other Minestom related stuff).
