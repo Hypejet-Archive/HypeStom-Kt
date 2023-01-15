@@ -1,4 +1,4 @@
-<img alt="Minestom Library" src="https://img.shields.io/badge/MINESTOM-LIBRARY-brightgreen?style=flat"> <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/HypeJet/HypeStom?style=flat"> [![](https://jitpack.io/v/HypeJet/HypeLib.svg)](https://jitpack.io/#HypeJet/HypeStom)
+<img alt="Minestom Library" src="https://img.shields.io/badge/MINESTOM-LIBRARY-brightgreen?style=flat"> <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/HypeJet/HypeStom?style=flat"> [![](https://jitpack.io/v/HypeJet/HypeStom.svg)](https://jitpack.io/#HypeJet/HypeStom) 
 
 
 # HypeStom
