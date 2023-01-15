@@ -10,7 +10,7 @@ plugins {
 }
 
 group 'com.github.HypeJet'
-version 'v2.0.0'
+version 'v2.1.0'
 
 repositories {
     mavenCentral()
@@ -45,7 +45,7 @@ publishing {
             }
             groupId = 'com.github.HypeJet'
             artifactId = 'HypeStom'
-            version = 'v2.0.0'
+            version = 'v2.1.0'
         }
     }
 }
