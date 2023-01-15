@@ -4,20 +4,32 @@ plugins {
     id 'java'
     id "com.github.johnrengelman.shadow" version "7.1.2"
     id 'maven-publish'
+    id 'org.jetbrains.kotlin.jvm' version '1.8.0'
+    id "org.jetbrains.kotlin.plugin.lombok" version "1.8.0"
     id "io.freefair.lombok" version "6.6.1"
 }
 
-group 'com.github.MinestomPlugins'
-version 'v1.0.6'
+group 'com.github.HypeJet'
+version 'v2.0.0'
 
 repositories {
     mavenCentral()
     maven { url 'https://jitpack.io' }
+    maven { url "https://s01.oss.sonatype.org/content/repositories/snapshots/" }
 }
 
 dependencies {
     compileOnly 'com.github.Minestom:Minestom:-SNAPSHOT'
-    implementation 'com.github.CityWideMC:CityStom:1.4.0'
+    implementation('net.kyori:adventure-text-minimessage:4.12.0')
+    implementation( "com.moandjiezana.toml:toml4j:0.7.2")
+    compileOnly("org.mongodb:mongo-java-driver:3.12.11")
+    compileOnly("org.projectlombok:lombok:1.18.24")
+    annotationProcessor("org.projectlombok:lombok:1.18.24")
+}
+
+kotlin {
+    jvmToolchain(17)
+    kotlinSourcesJar
 }
 
 publishing {
@@ -25,24 +37,31 @@ publishing {
         release(MavenPublication) {
             afterEvaluate {
                 var shadowJar = tasks.findByName("shadowJar")
-                if (shadowJar == null) from(components["java"])
+                if (shadowJar == null) {
+                    from(components["java"])
+                    from(components["kotlin"])
+                }
                 else artifact(shadowJar)
             }
-            groupId = 'com.github.MinestomPlugins'
-            artifactId = 'NextLib'
-            version = '1.0.6'
+            groupId = 'com.github.HypeJet'
+            artifactId = 'HypeStom'
+            version = 'v2.0.0'
         }
     }
 }
 
 tasks.withType(ShadowJar) {
     mergeServiceFiles()
+    archiveBaseName.set("HypeStom")
     archiveClassifier.set("")
 }
 
 java {
     withSourcesJar()
     withJavadocJar()
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
 }
 
 wrapper {
