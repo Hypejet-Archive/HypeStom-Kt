@@ -1,4 +1,4 @@
-package xyz.citywide.next.permission;
+package org.hypejet.hype.permission;
 
 import lombok.Getter;
 import lombok.Setter;

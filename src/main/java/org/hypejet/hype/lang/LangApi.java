@@ -1,4 +1,4 @@
-package xyz.citywide.next.lang;
+package org.hypejet.hype.lang;
 
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;

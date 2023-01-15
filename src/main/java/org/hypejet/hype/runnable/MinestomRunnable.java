@@ -1,4 +1,4 @@
-package xyz.citywide.next.runnable;
+package org.hypejet.hype.runnable;
 
 import net.minestom.server.MinecraftServer;
 import net.minestom.server.timer.ExecutionType;

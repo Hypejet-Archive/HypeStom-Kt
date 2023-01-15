@@ -1,4 +1,4 @@
-package xyz.citywide.next.permission;
+package org.hypejet.hype.permission;
 
 /**
  *Subpermission of a {@link PermissionProvider PermissionProvider}

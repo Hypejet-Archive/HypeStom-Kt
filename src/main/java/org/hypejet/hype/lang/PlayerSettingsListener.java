@@ -1,4 +1,4 @@
-package xyz.citywide.next.lang;
+package org.hypejet.hype.lang;
 
 import net.minestom.server.MinecraftServer;
 import net.minestom.server.entity.Player;

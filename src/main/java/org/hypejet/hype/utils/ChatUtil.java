@@ -1,4 +1,4 @@
-package xyz.citywide.next.utils;
+package org.hypejet.hype.utils;
 
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextDecoration;

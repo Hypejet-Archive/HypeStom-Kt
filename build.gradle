@@ -7,7 +7,7 @@ plugins {
     id "io.freefair.lombok" version "6.6.1"
 }
 
-group 'com.github.CityWideMC'
+group 'com.github.HypeJet'
 version 'v2.0.0'
 
 repositories {
@@ -31,8 +31,8 @@ publishing {
                 if (shadowJar == null) from(components["java"])
                 else artifact(shadowJar)
             }
-            groupId = 'com.github.CityWideMC'
-            artifactId = 'NextLib'
+            groupId = 'com.github.HypeJet'
+            artifactId = 'HypeLib'
             version = 'v2.0.0'
         }
     }

@@ -1,20 +1,12 @@
-package xyz.citywide.next.command;
+package org.hypejet.hype.command;
 
-import xyz.citywide.next.permission.PermissionProvider;
-import xyz.citywide.next.permission.SubPermission;
-import net.kyori.adventure.text.Component;
-import net.kyori.adventure.text.format.NamedTextColor;
-import net.minestom.server.adventure.audience.Audiences;
+import org.hypejet.hype.permission.PermissionProvider;
+import org.hypejet.hype.permission.SubPermission;
 import net.minestom.server.command.CommandSender;
 import net.minestom.server.command.ConsoleSender;
 import net.minestom.server.entity.Player;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
 
 /**
  * Normal Command witch also uses extra permission features.

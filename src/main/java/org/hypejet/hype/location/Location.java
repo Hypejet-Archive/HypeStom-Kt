@@ -1,4 +1,4 @@
-package xyz.citywide.next.location;
+package org.hypejet.hype.location;
 
 import net.minestom.server.coordinate.Pos;
 import net.minestom.server.instance.Instance;

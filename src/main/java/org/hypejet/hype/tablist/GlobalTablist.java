@@ -1,4 +1,4 @@
-package xyz.citywide.next.tablist;
+package org.hypejet.hype.tablist;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -8,14 +8,15 @@ import net.minestom.server.entity.Player;
 
 import java.util.ArrayList;
 
-public abstract class Tablist {
+public class GlobalTablist extends Tablist{
+    @Override
+    @SuppressWarnings("unchecked")
+    public ArrayList<Component>[] createPlayerList(Player player) {
+        return new ArrayList[2];
+    }
 
     @Getter @Setter private ArrayList<Component> header = new ArrayList<>();
     @Getter @Setter private ArrayList<Component> footer = new ArrayList<>();
-
-    @Getter private final ArrayList<Player> players = new ArrayList<>();
-
-    //public abstract void createPlayerList(Player player);
 
     public void addHeaderLine(Component line) {
         header.add(line);
@@ -36,16 +37,7 @@ public abstract class Tablist {
         footer.remove(line);
     }
 
-    public void addPlayer(Player player) {
-        players.add(player);
-    }
-    public void removePlayer(Player player) {
-        players.remove(player);
-    }
-    public void removePlayer(int player) {
-        players.remove(player);
-    }
-
+    @Override
     public void refresh() {
 
         Component str1 = Component.join(JoinConfiguration.separator(Component.text("\n")), header);

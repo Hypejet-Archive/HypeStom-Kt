@@ -1,4 +1,4 @@
-package xyz.citywide.next.extension;
+package org.hypejet.hype.extension;
 
 import com.moandjiezana.toml.Toml;
 import lombok.Getter;
@@ -9,9 +9,9 @@ import net.minestom.server.instance.block.BlockHandler;
 import net.minestom.server.timer.ExecutionType;
 import net.minestom.server.timer.TaskSchedule;
 import net.minestom.server.world.DimensionType;
+import org.hypejet.hype.permission.PermissionProvider;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import xyz.citywide.next.permission.PermissionProvider;
 
 import java.io.IOException;
 import java.io.InputStream;

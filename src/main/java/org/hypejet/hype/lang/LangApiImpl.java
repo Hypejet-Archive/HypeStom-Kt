@@ -1,4 +1,4 @@
-package xyz.citywide.next.lang;
+package org.hypejet.hype.lang;
 
 import com.moandjiezana.toml.Toml;
 import com.mongodb.client.MongoCollection;
