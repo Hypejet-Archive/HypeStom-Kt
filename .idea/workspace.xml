@@ -5,10 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3752b5f1-9449-4a86-b550-a79d143f237e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/hypejet/hype/command/Command.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/hypejet/hype/extension/Extension.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/hypejet/hype/lang/LangApi.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/hypejet/hype/lang/LangApiImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/hypejet/hype/lang/PlayerDisconnectListener.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/hypejet/hype/lang/PlayerLanguageChangeEvent.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/hypejet/hype/lang/PlayerSettingsListener.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/hypejet/hype/location/Location.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/hypejet/hype/permission/GlobalPermissionProvider.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/hypejet/hype/permission/PermissionProvider.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/hypejet/hype/runnable/MinestomRunnable.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/hypejet/hype/tablist/GlobalTablist.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/hypejet/hype/tablist/Tablist.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/hypejet/hype/utils/ChatUtil.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/window/next/command/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/window/next/command/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/window/next/extension/Extension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/window/next/extension/Extension.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hypejet/hype/command/Command.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hypejet/hype/extension/Extension.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hypejet/hype/lang/LangApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hypejet/hype/lang/LangApiImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hypejet/hype/lang/PlayerDisconnectListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hypejet/hype/lang/PlayerLanguageChangeEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hypejet/hype/lang/PlayerSettingsListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hypejet/hype/location/Location.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hypejet/hype/permission/GlobalPermissionProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hypejet/hype/permission/PermissionProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hypejet/hype/permission/SubPermission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/hypejet/hype/permission/SubPermission.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hypejet/hype/runnable/MinestomRunnable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hypejet/hype/tablist/GlobalTablist.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hypejet/hype/tablist/Tablist.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hypejet/hype/utils/ChatUtil.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,24 +63,30 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="NextLib" type="f1a62948:ProjectNode" />
+                <item name="HypeStom" type="f1a62948:ProjectNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="NextLib" type="f1a62948:ProjectNode" />
+                <item name="HypeStom" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="NextLib" type="f1a62948:ProjectNode" />
+                <item name="HypeStom" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="NextLib" type="f1a62948:ProjectNode" />
+                <item name="HypeStom" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="publishing" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="HypeStom" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="shadow" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -61,6 +99,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="AnnotationType" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -69,6 +109,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2IjI8O4UnxkGGKG6HQSWkbUaESb" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -81,13 +124,14 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/next/NextLib&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/hypejet/NextLib&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.NextLib [build]">
+  <component name="RunManager" selected="Gradle.build">
     <configuration name="NextLib [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -109,7 +153,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="NextLib [publishReleasePublicationToMavenLocal]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="NextLib [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -120,7 +164,28 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="publishReleasePublicationToMavenLocal" />
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="NextLib [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -142,6 +207,27 @@
         <option name="taskNames">
           <list>
             <option value="publishToMavenLocal" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="NextLib [publish]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="publish" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -175,7 +261,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.NextLib [build]" />
-        <item itemvalue="Gradle.NextLib [publishReleasePublicationToMavenLocal]" />
+        <item itemvalue="Gradle.NextLib [jar]" />
+        <item itemvalue="Gradle.NextLib [publish]" />
+        <item itemvalue="Gradle.NextLib [clean]" />
         <item itemvalue="Gradle.NextLib [publishToMavenLocal]" />
       </list>
     </recent_temporary>
