@@ -51,6 +51,7 @@ publishing {
 }
 
 tasks.withType(ShadowJar) {
+    dependsOn('sourcesJar', 'javadocJar')
     mergeServiceFiles()
     archiveBaseName.set("HypeStom")
     archiveClassifier.set("")
@@ -63,6 +64,8 @@ java {
         languageVersion.set(JavaLanguageVersion.of(17))
     }
 }
+
+
 
 wrapper {
     gradleVersion = "7.6"
