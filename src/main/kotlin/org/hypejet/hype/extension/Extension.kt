@@ -23,8 +23,8 @@ abstract class Extension : Extension {
      *
      * @see PermissionProvider
      */
-    var provider: PermissionProvider
-        private set
+    open var provider: PermissionProvider
+        set(value) {}
 
     /**
      * Create a new Extension and create PermissionProvider with custom op level requirement.
