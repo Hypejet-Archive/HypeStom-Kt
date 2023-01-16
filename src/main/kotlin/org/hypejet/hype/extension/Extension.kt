@@ -23,8 +23,9 @@ abstract class Extension : Extension {
      *
      * @see PermissionProvider
      */
-    @Getter
-    private var provider: PermissionProvider
+    protected var provider: PermissionProvider
+        get = field
+        private set
 
     /**
      * Create a new Extension and create PermissionProvider with custom op level requirement.
