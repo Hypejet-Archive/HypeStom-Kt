@@ -23,8 +23,7 @@ abstract class Extension : Extension {
      *
      * @see PermissionProvider
      */
-    protected var provider: PermissionProvider
-        get = field
+    var provider: PermissionProvider
         private set
 
     /**
