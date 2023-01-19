@@ -1,6 +1,7 @@
 package org.hypejet.hype.extension;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.moandjiezana.toml.Toml;
 import lombok.Getter;
 import net.kyori.adventure.text.Component;
@@ -146,14 +147,14 @@ public abstract class Extension extends net.minestom.server.extensions.Extension
      *
      */
     public <T extends Object> T getJsonConfig(T config) {
-        Gson gson = new Gson();
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
         Path path = Path.of(String.valueOf(getDataDirectory()), "config.json");
 
         try {
             if(!Files.exists(path)) {
                 if(!Files.exists(getDataDirectory()))
-                    Files.createDirectory(path);
+                    Files.createDirectory(getDataDirectory());
                 Files.createFile(path);
                 OutputStream stream = Files.newOutputStream(path);
                 stream.write(gson.toJson(config).getBytes());
