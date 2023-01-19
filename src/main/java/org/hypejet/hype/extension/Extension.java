@@ -146,7 +146,7 @@ public abstract class Extension extends net.minestom.server.extensions.Extension
      * @see <a href="https://github.com/google/gson/blob/master/UserGuide.md#object-examples">Gson Documentation</a>
      *
      */
-    public <T extends Object> T getJsonConfig(T config) {
+    public <T> T getJsonConfig(T config) {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
         Path path = Path.of(String.valueOf(getDataDirectory()), "config.json");
@@ -163,6 +163,86 @@ public abstract class Extension extends net.minestom.server.extensions.Extension
             } else {
                 return (T) gson.fromJson(Files.readString(path), config.getClass());
             }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    /**
+     *
+     * @param config The config
+     *
+     * @see <a href="https://github.com/google/gson/blob/master/UserGuide.md#object-examples">Gson Documentation</a>
+     *
+     */
+    public <T> void saveJsonConfig(T config) {
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+        Path path = Path.of(String.valueOf(getDataDirectory()), "config.json");
+
+        try {
+            if(!Files.exists(getDataDirectory()))
+                Files.createDirectory(getDataDirectory());
+            if(!Files.exists(path))
+                Files.createFile(path);
+            OutputStream stream = Files.newOutputStream(path);
+            stream.write(gson.toJson(config).getBytes());
+            stream.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    /**
+     *
+     * @param config The config type
+     * @return New config using the config parameter as type
+     *
+     * @see <a href="https://github.com/google/gson/blob/master/UserGuide.md#object-examples">Gson Documentation</a>
+     *
+     */
+    public <T> T getJsonConfig(T config, String name) {
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+        Path path = Path.of(String.valueOf(getDataDirectory()), name);
+
+        try {
+            if(!Files.exists(path)) {
+                if(!Files.exists(getDataDirectory()))
+                    Files.createDirectory(getDataDirectory());
+                Files.createFile(path);
+                OutputStream stream = Files.newOutputStream(path);
+                stream.write(gson.toJson(config).getBytes());
+                stream.close();
+                return config;
+            } else {
+                return (T) gson.fromJson(Files.readString(path), config.getClass());
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    /**
+     *
+     * @param config The config
+     *
+     * @see <a href="https://github.com/google/gson/blob/master/UserGuide.md#object-examples">Gson Documentation</a>
+     *
+     */
+    public <T> void saveJsonConfig(T config, String name) {
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+        Path path = Path.of(String.valueOf(getDataDirectory()), name);
+
+        try {
+            if(!Files.exists(getDataDirectory()))
+                Files.createDirectory(getDataDirectory());
+            if(!Files.exists(path))
+                Files.createFile(path);
+            OutputStream stream = Files.newOutputStream(path);
+            stream.write(gson.toJson(config).getBytes());
+            stream.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
