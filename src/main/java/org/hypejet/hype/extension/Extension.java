@@ -1,5 +1,6 @@
 package org.hypejet.hype.extension;
 
+import com.google.gson.Gson;
 import com.moandjiezana.toml.Toml;
 import lombok.Getter;
 import net.kyori.adventure.text.Component;
@@ -135,4 +136,35 @@ public abstract class Extension extends net.minestom.server.extensions.Extension
             throw new RuntimeException(e);
         }
     }
+
+    /**
+     *
+     * @param config The config type
+     * @return New config using the config parameter as type
+     *
+     * @see <a href="https://github.com/google/gson/blob/master/UserGuide.md#object-examples">Gson Documentation</a>
+     *
+     */
+    public <T extends Object> T getJsonConfig(T config) {
+        Gson gson = new Gson();
+
+        Path path = Path.of(String.valueOf(getDataDirectory()), "config.json");
+
+        try {
+            if(!Files.exists(path)) {
+                if(!Files.exists(getDataDirectory()))
+                    Files.createDirectory(path);
+                Files.createFile(path);
+                OutputStream stream = Files.newOutputStream(path);
+                stream.write(gson.toJson(config).getBytes());
+                stream.close();
+                return config;
+            } else {
+                return (T) gson.fromJson(Files.readString(path), config.getClass());
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
+
