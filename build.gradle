@@ -17,7 +17,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'com.github.Minestom:Minestom:-SNAPSHOT'
+    compileOnly 'com.github.Minestom:Minestom:c995f9c3a9'
     implementation('net.kyori:adventure-text-minimessage:4.12.0')
     implementation( "com.moandjiezana.toml:toml4j:0.7.2")
     compileOnly("org.mongodb:mongo-java-driver:3.12.11")
