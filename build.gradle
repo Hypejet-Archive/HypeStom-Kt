@@ -8,7 +8,7 @@ plugins {
 }
 
 group 'com.github.HypeJet'
-version 'v2.0.0'
+version 'v1.7.0'
 
 repositories {
     mavenCentral()
@@ -32,8 +32,8 @@ publishing {
                 else artifact(shadowJar)
             }
             groupId = 'com.github.HypeJet'
-            artifactId = 'HypeLib'
-            version = 'v2.0.0'
+            artifactId = 'HypeStom'
+            version = 'v1.7.0'
         }
     }
 }

@@ -15,6 +15,7 @@ import org.hypejet.hype.permission.PermissionProvider;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -204,19 +205,19 @@ public abstract class Extension extends net.minestom.server.extensions.Extension
     public <T> T getJsonConfig(T config, String name) {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
-        Path path = Path.of(String.valueOf(getDataDirectory()), name);
+        File file = new File(getDataDirectory().toString() + "\\" + name);
 
         try {
-            if(!Files.exists(path)) {
+            if(!file.exists()) {
                 if(!Files.exists(getDataDirectory()))
                     Files.createDirectory(getDataDirectory());
-                Files.createDirectories(path);
-                Files.createFile(path);
-                OutputStream stream = Files.newOutputStream(path);
+                file.getParentFile().mkdirs();
+                file.createNewFile();
+                OutputStream stream = Files.newOutputStream(file.toPath());
                 stream.write(gson.toJson(config).getBytes());
                 stream.close();
                 return config;
-            } else return (T) gson.fromJson(Files.readString(path), config.getClass());
+            } else return (T) gson.fromJson(Files.readString(file.toPath()), config.getClass());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -232,16 +233,16 @@ public abstract class Extension extends net.minestom.server.extensions.Extension
     public <T> void saveJsonConfig(T config, String name) {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
-        Path path = Path.of(String.valueOf(getDataDirectory()), name);
+        File file = new File(getDataDirectory().toString() + "\\" + name);
 
         try {
             if(!Files.exists(getDataDirectory()))
                 Files.createDirectory(getDataDirectory());
-            if(!Files.exists(path)) {
-                Files.createDirectories(path);
-                Files.createFile(path);
+            if(!file.exists()) {
+                file.getParentFile().mkdirs();
+                file.createNewFile();
             }
-            OutputStream stream = Files.newOutputStream(path);
+            OutputStream stream = Files.newOutputStream(file.toPath());
             stream.write(gson.toJson(config).getBytes());
             stream.close();
         } catch (IOException e) {
