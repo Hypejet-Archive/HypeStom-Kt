@@ -210,6 +210,7 @@ public abstract class Extension extends net.minestom.server.extensions.Extension
             if(!Files.exists(path)) {
                 if(!Files.exists(getDataDirectory()))
                     Files.createDirectory(getDataDirectory());
+                Files.createDirectories(path);
                 Files.createFile(path);
                 OutputStream stream = Files.newOutputStream(path);
                 stream.write(gson.toJson(config).getBytes());
@@ -236,8 +237,10 @@ public abstract class Extension extends net.minestom.server.extensions.Extension
         try {
             if(!Files.exists(getDataDirectory()))
                 Files.createDirectory(getDataDirectory());
-            if(!Files.exists(path))
+            if(!Files.exists(path)) {
+                Files.createDirectories(path);
                 Files.createFile(path);
+            }
             OutputStream stream = Files.newOutputStream(path);
             stream.write(gson.toJson(config).getBytes());
             stream.close();
