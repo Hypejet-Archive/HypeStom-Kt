@@ -55,10 +55,3 @@ wrapper {
     gradleVersion = "7.6"
     distributionType = Wrapper.DistributionType.ALL
 }
-
-
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
-    }
-}

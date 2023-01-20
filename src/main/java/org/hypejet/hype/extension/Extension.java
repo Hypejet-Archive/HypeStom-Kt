@@ -215,9 +215,7 @@ public abstract class Extension extends net.minestom.server.extensions.Extension
                 stream.write(gson.toJson(config).getBytes());
                 stream.close();
                 return config;
-            } else {
-                return (T) gson.fromJson(Files.readString(path), config.getClass());
-            }
+            } else return (T) gson.fromJson(Files.readString(path), config.getClass());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
