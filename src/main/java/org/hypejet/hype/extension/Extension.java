@@ -7,11 +7,13 @@ import lombok.Getter;
 import net.kyori.adventure.text.Component;
 import net.minestom.server.MinecraftServer;
 import net.minestom.server.command.builder.Command;
+import net.minestom.server.coordinate.Pos;
 import net.minestom.server.instance.block.BlockHandler;
 import net.minestom.server.timer.ExecutionType;
 import net.minestom.server.timer.TaskSchedule;
 import net.minestom.server.world.DimensionType;
 import org.hypejet.hype.permission.PermissionProvider;
+import org.hypejet.hype.utils.PosDeserializer;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -148,7 +150,7 @@ public abstract class Extension extends net.minestom.server.extensions.Extension
      *
      */
     public <T> T getJsonConfig(T config) {
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        Gson gson = new GsonBuilder().setPrettyPrinting().registerTypeAdapter(Pos.class, new PosDeserializer()).create();
 
         Path path = Path.of(String.valueOf(getDataDirectory()), "config.json");
 
@@ -177,7 +179,7 @@ public abstract class Extension extends net.minestom.server.extensions.Extension
      *
      */
     public <T> void saveJsonConfig(T config) {
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        Gson gson = new GsonBuilder().setPrettyPrinting().registerTypeAdapter(Pos.class, new PosDeserializer()).create();
 
         Path path = Path.of(String.valueOf(getDataDirectory()), "config.json");
 
@@ -203,7 +205,7 @@ public abstract class Extension extends net.minestom.server.extensions.Extension
      *
      */
     public <T> T getJsonConfig(T config, String name) {
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        Gson gson = new GsonBuilder().setPrettyPrinting().registerTypeAdapter(Pos.class, new PosDeserializer()).create();
 
         File file = new File(getDataDirectory().toString() + "\\" + name);
 
@@ -231,7 +233,7 @@ public abstract class Extension extends net.minestom.server.extensions.Extension
      *
      */
     public <T> void saveJsonConfig(T config, String name) {
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        Gson gson = new GsonBuilder().setPrettyPrinting().registerTypeAdapter(Pos.class, new PosDeserializer()).create();
 
         File file = new File(getDataDirectory().toString() + "\\" + name);
 
