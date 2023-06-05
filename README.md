@@ -1,6 +1,6 @@
 # HypeStom
 
-<img alt="Minestom Library" src="https://img.shields.io/badge/minestom-library-brightgreen?style=flat-square"> <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/HypeJet/HypeStom-Kt?style=flat-square"> [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+<img alt="Minestom Library" src="https://img.shields.io/badge/minestom-library-brightgreen?style=flat-square"> <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/HypeJet/HypeStom-Kt?style=flat-square"> [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
 TODO: Fill out this short description.
 
